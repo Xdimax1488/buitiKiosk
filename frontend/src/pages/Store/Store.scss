@@ -1,0 +1,39 @@
+.store {
+  margin: 2rem 4rem;
+  padding: 0 1rem;
+}
+
+.store_wrrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.category {
+  span {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  width: 15%;
+  ul {
+    text-align: start;
+    margin-top: 1rem;
+    li {
+      padding: 0.5rem 0;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: capitalize;
+      &:hover {
+        border-bottom: 1px solid #000;
+        scale: 1.1;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.products {
+  width: 85%;
+}

@@ -1,21 +1,23 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
+import { Footer, Navbar } from './components';
 import Home from './pages/Home';
-import { Navbar,Footer } from './components';
+import Store from './pages/Store/Store';
 
 import './App.css';
-import Profail from './components/Profail/Profail';
+import Profail from './pages/Profail/Profail';
 
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/profail" element={<Profail/>} />
+        <Route path="/profail" element={<Profail />} />
+        <Route path="/store" element={<Store />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   );
 }

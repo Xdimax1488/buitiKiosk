@@ -42,10 +42,10 @@ const Navbar = () => {
         </div>
         <div className="right">
           <div className="nav-item">
-            <Link className="link nav-link">Home</Link>
-            <Link className="link nav-link">About</Link>
+            <Link to='/' className="link nav-link">Home</Link>
+            <Link  className="link nav-link">About</Link>
             <Link className="link nav-link">Contact</Link>
-            <Link className="link nav-link">Store</Link>
+            <Link to = '/store' className="link nav-link">Store</Link>
           </div>
           <div className="nav-icon">
             <div className="log-person" onClick={() => setOpen(!open)}>

@@ -1,0 +1,137 @@
+.profail {
+  height: 60vh;
+  margin: 4rem 2rem;
+}
+.profail_wrraper {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0 6rem;
+}
+.profail_info {
+  width: 35%;
+
+  box-shadow: 0 0 21px -5px rgba(0, 0, 0, 0.3);
+}
+.profail_info-person {
+  padding: 3rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    margin-bottom: 7rem;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  .person-desc {
+    text-transform: capitalize;
+    h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .data {
+      font-weight: 300;
+    }
+  }
+}
+.profail_button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .active{
+    background-color: rgb(175, 245, 175);
+  }
+  button {
+    text-align: start;
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 0 0 21px -5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    
+    
+    
+  }
+  .btn-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .order-num {
+      border-radius: 50%;
+      background-color: red;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      color: white;
+    }
+  }
+}
+
+.profail_tabls {
+  width: 60%;
+  //background-color: aqua;
+}
+.user_information{
+    padding-top: 3rem;
+    button{
+      width:100%;
+      margin-top:2rem;
+      padding: 1rem 0;
+      font-weight: 500;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .3s ease;
+      &:hover{
+        background-color:rgb(175, 245, 175); ;
+      }
+    }
+}
+.user_iformation-wrraper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.colum{
+    width: 45%;
+    .colum-1flor{
+        margin-bottom: 2rem;
+    }
+    h4{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: .8rem;
+        color:grey
+    }
+    input{
+        font-size: 1rem;
+        margin-top: .8rem;
+        width: 100%;
+        padding: 1.5rem;
+        border: 1.5px solid rgb(193, 190, 190);
+    }
+}
+.table{
+  width:100%;
+  
+  th{
+    text-align: start;
+    border-bottom: 2px solid #000;
+    padding-bottom: 1rem;
+    
+    
+  }
+  td{
+     padding: 1rem 0;;
+  }
+  .alert-danger{
+    background-color: red;
+  }
+  .alert-good{
+    background-color: rgb(175, 245, 175);
+  }
+}
