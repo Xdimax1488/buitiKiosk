@@ -6,7 +6,13 @@ import Home from './pages/Home';
 import Store from './pages/Store/Store';
 
 import './App.css';
+import Product from './pages/Product/Product';
 import Profail from './pages/Profail/Profail';
+import Login from './pages/Forms/Login';
+import Register from './pages/Forms/Register';
+import Cart from './pages/Cart/Cart';
+import Shipping from './pages/Forms/Shipping';
+import Payment from './pages/Forms/Payment';
 
 function App() {
   return (
@@ -14,8 +20,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/profail" element={<Profail />} />
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/profile" element={<Profail />} />
+        <Route path="/cart/:id?" element={<Cart />} />
+        <Route path="/shipping" element={<Shipping />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="/store" element={<Store />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
       <Footer />
     </>

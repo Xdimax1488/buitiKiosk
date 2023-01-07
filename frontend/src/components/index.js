@@ -9,4 +9,4 @@ export { default as Slider } from './Slideer/Slider';
 export { default as ProfaileTabs } from './ProfailComponents/ProfaileTabs';
 export { default as Orders } from './ProfailComponents/Orders';
 export { default as Products } from './StoreComponent/Products';
-export { default as Category } from './StoreComponent/Category';
+

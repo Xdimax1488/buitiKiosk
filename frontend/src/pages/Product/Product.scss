@@ -1,0 +1,151 @@
+.product-pg {
+  margin: 2rem 6rem;
+  padding: 0 1rem;
+  .select-btn {
+    border-radius: 4px;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    &:hover {
+      background: #c1c0c0;
+      color: #000;
+    }
+  }
+}
+
+.product-pg_desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.product-pg_image {
+  width: 45%;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.product-pg_dtl {
+  width: 50%;
+  .product-pg_tittle {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+  p {
+    line-height: 24px;
+    color: #7a7a7a;
+  }
+  .product-pg_count {
+    width: 50%;
+    margin-top: 40px;
+    border: 2px solid #f3f3f3;
+    border-radius: 5px;
+    .count_info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.3rem;
+      border-bottom: 2px solid #f3f3f3;
+      h6 {
+        font-size: 1rem;
+        color: #7a7a7a;
+      }
+      span {
+        font-weight: 600;
+      }
+      select {
+        background-color: #f3f3f3;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        border: 0;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.product_review {
+  display: flex;
+  justify-content: space-between;
+  h4 {
+    text-transform: uppercase;
+    color: #7a7a7a;
+    margin-bottom: 0.5rem;
+  }
+
+  .product_reviews {
+    width: 45%;
+
+    .no_reviews {
+      text-transform: capitalize;
+      background-color: rgb(191, 236, 254);
+      color: #7a7a7a;
+      padding: 1rem;
+      width: 100%;
+      font-weight: 500;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
+    .reviews_container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #f3f3f3;
+      .commentator {
+        text-transform: capitalize;
+        font-weight: 700;
+      }
+      span {
+        font-weight: 600;
+        color: #7a7a7a;
+      }
+      .comment {
+        padding: 1rem;
+        background-color: rgb(191, 236, 254);
+        border-radius: 5px;
+      }
+    }
+  }
+  .reviews-form {
+    width: 45%;
+    .form_colm {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      strong {
+        padding: 1rem 1rem 1rem 0;
+        text-transform: capitalize;
+      }
+      .coment_fild {
+        background-color: #f3f3f3;
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .alert_info {
+      color: #7a7a7a;
+      padding: 1rem;
+      font-weight: 500;
+      background-color: rgba(193, 186, 163, 0.743);
+      border-radius: 5px;
+      margin-top: 1rem;
+      span {
+        color: #000;
+      }
+    }
+  }
+}

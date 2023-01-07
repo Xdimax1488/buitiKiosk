@@ -1,0 +1,115 @@
+.cart_page {
+  margin: 2rem 6rem;
+  padding: 0 1rem;
+  .cart_alert {
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(191, 236, 254);
+    border-radius: 5px;
+    color: #7a7a7a;
+    margin-bottom: 2rem;
+    .total_products {
+      margin-left: 1rem;
+      color: #ff0000;
+    }
+  }
+  .cart_item {
+    padding: 20px;
+    box-shadow: 0 12px 20px 1px rgba(64, 64, 64, 0.09);
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+    .remuve_button {
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      cursor: pointer;
+    }
+    .cart_img {
+      width: 20%;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .item_title {
+      width: 42%;
+      padding: 1rem;
+      h4 {
+        color: #000;
+        font-size: 1.3rem;
+      }
+    }
+    .cart_quantity {
+      width: 17%;
+      padding: 1rem;
+      select {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+    h6 {
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: #7a7a7a;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    .cart_price {
+      margin: auto;
+    }
+  }
+  .cart_total {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    text-align: end;
+    border-bottom: 1px solid #7a7a7a;
+    padding-right: 2rem;
+    .cart_total-total {
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: #7a7a7a;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .cart_total-price {
+      margin-left: 1rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+  .cart_buttons {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    .cart_button {
+      width: 45%;
+      .gren{
+        background: rgb(175, 245, 175);
+        color: #000;
+      }
+      button {
+        border-radius: 4px;
+        background: #000;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+        border: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        &:hover {
+          background: #c1c0c0;
+          color: #000;
+        }
+      }
+    }
+  }
+}

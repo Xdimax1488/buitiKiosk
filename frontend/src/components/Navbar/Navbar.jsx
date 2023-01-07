@@ -55,17 +55,17 @@ const Navbar = () => {
               <div me="sort_popup">
                 {open && (
                   <div className="sort_popup-items">
-                    <Link to='/profail' className='links'>profile</Link>
+                    <Link to='/profile' className='links'>profile</Link>
                     <Link className='links'>logout</Link>
                     
                   </div>
                 )}
               </div>
             </div>
-            <button type="button" className="shop-icon" onClick="">
+            <Link to={'/cart'}><button type="button" className="shop-icon" onClick="">
               <HiOutlineShoppingCart />
               <span className="shop-icon-qty">1</span>
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>
