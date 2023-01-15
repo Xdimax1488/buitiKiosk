@@ -1,0 +1,108 @@
+.placeorder {
+  margin: 2rem 6rem 6rem 6rem;
+  padding: 0 1rem;
+}
+.placeorder_header {
+  display: flex;
+  justify-content: space-between;
+  .header_colum {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    background-color: rgb(216, 249, 216);
+    align-items: center;
+    padding: 2rem;
+    .colum_icon {
+      padding: 1rem;
+      background-color: rgb(215, 215, 215);
+      border-radius: 50%;
+    }
+    .colum_desc {
+      font-weight: 500;
+      color: #7a7a7a;
+      h4 {
+        color: #000;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+      .deliv_info {
+        color: #fff;
+        background-color: red;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        box-shadow: 2px 3px 0px 0px #000000;
+      }
+      .pay_info {
+        color: #fff;
+        background-color:rgb(0, 179, 255);
+        font-weight: 500;
+        padding: 0.5rem 1.5rem;
+        box-shadow: 2px 3px 0px 0px #000000;
+      }
+    }
+  }
+}
+.placeorder_body {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 3rem;
+  .order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(215, 215, 215);
+    .orders_img {
+      width: 20%;
+    }
+    .title {
+      padding-left: 3rem;
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: 500;
+      width: 40%;
+      text-transform: capitalize;
+    }
+    .quantiti,
+    .total {
+      width: 20%;
+      text-transform: uppercase;
+      h4 {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    }
+  }
+  .body_table {
+    width: 30%;
+    .table {
+      background-color: rgb(215, 215, 215);
+      border: 1px solid #7a7a7a;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      td {
+        border: 1px solid #7a7a7a;
+        padding-left: 1rem;
+        font-weight: 500;
+      }
+    }
+    button {
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      background-color: #000;
+      padding: 1rem 0;
+      transition: all 0.4s ease;
+      &:hover {
+        background: #c1c0c0;
+        color: #000;
+      }
+    }
+  }
+}
