@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {PayPalButton} from 'react-paypal-button-v2'
+
 
 import { GiPositionMarker } from 'react-icons/gi';
 import { IoMdPerson } from 'react-icons/io';
@@ -115,7 +115,7 @@ const PlaceOrder = () => {
             </table>
 
             <div className="pay_button">
-                <PayPalButton amount={345}/>
+                
             </div>
           </div>
         </div>

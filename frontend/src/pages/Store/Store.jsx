@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Products } from '../../components';
-import { StoreData } from './StoreData';
+//import { StoreData } from './StoreData';
+import axios from 'axios';
 
 import './Store.scss';
 
@@ -10,16 +11,22 @@ const Store = () => {
   const categories = ['all', 'test1', 'test2', 'test3', 'test4', 'test5'];
 
   useEffect(() => {
-    if (categories[categoriId] === 'all') {
-      setProducts(StoreData);
-    } else {
-      const newData = StoreData.filter((product) => {
-        return product.categori === categories[categoriId];
-      });
-      setProducts(newData);
-    }
+    const fetchproducts = async () => {
+      const { data } = await axios.get('/api/products');
+      setProducts(data);
+
+      if (categories[categoriId] === 'all') {
+        setProducts(data);
+      } else {
+        const newData = data.filter((product) => {
+          return product.categori === categories[categoriId];
+        });
+        setProducts(newData);
+      }
+    };
+    fetchproducts();
   }, [categoriId]);
-  
+
   const onChangeCategories = (i) => setCategoriId(i);
 
   return (
