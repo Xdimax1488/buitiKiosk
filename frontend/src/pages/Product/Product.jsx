@@ -1,14 +1,24 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-import { StoreData } from '../Store/StoreData';
 
 import './Product.scss'
 
 const Product = () => {
   const params = useParams();
-  const product = StoreData.find((p) => p._id === params.id);
+  //const product = StoreData.find((p) => p._id === params.id);
+  const [product,setProduct]= useState({})
+
+  useEffect (()=>{
+    const fetchproduct = async () => {
+      const { data } = await axios.get(`/api/products/${params.id}`)
+      setProduct(data)
+    }
+    fetchproduct()
+  },[params ])
+
 
   return (
     <div className="product-pg">
