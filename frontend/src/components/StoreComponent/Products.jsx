@@ -8,7 +8,7 @@ const Products = ({ item }) => {
       <Link to={`/product/${item._id}`}>
         <img src={item.image} alt="" />
         <div className="product_desc">
-          <p>{item.tittle}</p>
+          <p>{item.name}</p>
           <p>{item.numReviews} reviews</p>
           <p>${item.price}</p>
         </div>
