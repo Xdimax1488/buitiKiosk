@@ -1,61 +1,82 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useParams,useNavigate } from 'react-router-dom';
+import { listProductDetails } from '../../Redux/Actions/ProductAction';
 
 import './Product.scss';
+import ProductSkeleton from './ProductSkeleton';
 
 const Product = () => {
   const params = useParams();
+  const navigate = useNavigate()
   //const product = StoreData.find((p) => p._id === params.id);
-  const [product, setProduct] = useState({});
+  const [qty, setQty] = useState(1);
+  const productId = params.id;
+  const dispatch = useDispatch();
+
+  const productDetails = useSelector((state) => state.productDetails);
+  const { loading, error, product } = productDetails;
 
   useEffect(() => {
-    const fetchproduct = async () => {
-      const { data } = await axios.get(`/api/products/${params.id}`);
-      setProduct(data);
-    };
-    fetchproduct();
-  }, [params]);
+    dispatch(listProductDetails(productId));
+  }, [dispatch, productId]);
 
+  const AddToCartHandle = (e) => {
+    e.preventDefault();
+    navigate(`/cart/${productId}?qty=${qty}`);
+    
+  };
+
+  const skeletons = <ProductSkeleton />;
   return (
     <div className="product-pg">
       <div className="product-pg_desc">
-        <div className="product-pg_image">
-          <img src={product.image} alt="" />
-        </div>
-        <div className="product-pg_dtl">
-          <div className="product-pg_tittle">{product.name}</div>
-          <p>{product.description}</p>
-          <div className="product-pg_count">
-            <div className="count_info">
-              <h6>Price</h6>
-              <span>{product.price}</span>
+        {loading ? (
+          skeletons
+        ) : error ? (
+          <p>Error:</p>
+        ) : (
+          <>
+            <div className="product-pg_image">
+              <img src={product.image} alt="" />
             </div>
-            <div className="count_info">
-              <h6>Status</h6>
-              {product.countInstok > 0 ? <span>in stock</span> : <span>unavailable</span>}
-            </div>
-            <div className="count_info">
-              <h6>Reviews</h6>
-              <span>{product.numReviews}</span>
-            </div>
-            {product.countInstok > 0 ? (
-              <>
+            <div className="product-pg_dtl">
+              <div className="product-pg_tittle">{product.name}</div>
+              <p>{product.description}</p>
+              <div className="product-pg_count">
                 <div className="count_info">
-                  <h6>quantity</h6>
-                  <select>
-                    {[...Array(product.countInstok).keys()].map((x) => (
-                      <option key={x + 1} value={x + 1}>
-                        {x + 1}
-                      </option>
-                    ))}
-                  </select>
+                  <h6>Price</h6>
+                  <span>{product.price}</span>
                 </div>
-                <button className="select-btn">Add To Cart</button>
-              </>
-            ) : null}
-          </div>
-        </div>
+                <div className="count_info">
+                  <h6>Status</h6>
+                  {product.countInstok > 0 ? <span>in stock</span> : <span>unavailable</span>}
+                </div>
+                <div className="count_info">
+                  <h6>Reviews</h6>
+                  <span>{product.numReviews}</span>
+                </div>
+                {product.countInstok > 0 ? (
+                  <>
+                    <div className="count_info">
+                      <h6>quantity</h6>
+                      <select>
+                        {[...Array(product.countInstok).keys()].map((x) => (
+                          <option key={x + 1} value={x + 1}>
+                            {x + 1}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <button onClick={AddToCartHandle} className="select-btn">
+                      Add To Cart
+                    </button>
+                  </>
+                ) : null}
+              </div>
+            </div>
+          </>
+        )}
       </div>
       <div className="product_review">
         <div className="product_reviews">
