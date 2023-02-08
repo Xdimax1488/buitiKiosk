@@ -9,10 +9,14 @@ import Plflag from '../../asets/pl-flag.png';
 import Uaflag from '../../asets/ua-flag.png';
 
 import './Navbar.scss';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [chuesContry, setChuesContry] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
 
   const flag = [Uaflag, Plflag];
   return (
@@ -64,7 +68,7 @@ const Navbar = () => {
             </div>
             <Link to={'/cart'}><button type="button" className="shop-icon" onClick="">
               <HiOutlineShoppingCart />
-              <span className="shop-icon-qty">1</span>
+              <span className="shop-icon-qty">{cartItems.length}</span>
             </button></Link>
           </div>
         </div>

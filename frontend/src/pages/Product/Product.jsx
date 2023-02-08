@@ -60,7 +60,7 @@ const Product = () => {
                   <>
                     <div className="count_info">
                       <h6>quantity</h6>
-                      <select>
+                      <select value={qty} onChange={(e)=>setQty(e.target.value)}>
                         {[...Array(product.countInstok).keys()].map((x) => (
                           <option key={x + 1} value={x + 1}>
                             {x + 1}
