@@ -36,6 +36,9 @@
     width: 20%;
     color: black;
     overflow: hidden;
+    .image{
+        overflow: hidden;
+    }
     
     img{
         display: block;

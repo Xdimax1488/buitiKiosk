@@ -34,6 +34,10 @@ const productSchema = mongoose.Schema(
       type: String,
       require: true,
     },
+    home_page_position: {
+      type: String,
+      require: true,
+    },
 
     reviews: [reviewsSchema],
     numReviews: {

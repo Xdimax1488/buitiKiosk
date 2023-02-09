@@ -66,7 +66,7 @@ const Navbar = () => {
                 )}
               </div>
             </div>
-            <Link to={'/cart'}><button type="button" className="shop-icon" onClick="">
+            <Link to={'/cart'}><button type="button" className="shop-icon" >
               <HiOutlineShoppingCart />
               <span className="shop-icon-qty">{cartItems.length}</span>
             </button></Link>

@@ -9,6 +9,7 @@ const StoreData = [
     price: 100,
     numReviews: 3,
     countInstok: 10,
+    home_page_position: 'new arriveds',
   },
   {
     image:
@@ -20,6 +21,7 @@ const StoreData = [
     price: 100,
     numReviews: 3,
     countInstok: 4,
+    home_page_position: 'new arriveds',
   },
   {
     image:
@@ -31,6 +33,7 @@ const StoreData = [
     price: 100,
     numReviews: 3,
     countInstok: 4,
+    home_page_position: 'new arriveds',
   },
   {
     image:
@@ -42,6 +45,7 @@ const StoreData = [
     price: 100,
     numReviews: 3,
     countInstok: 4,
+    home_page_position: 'new arriveds',
   },
   {
     image:
@@ -53,6 +57,7 @@ const StoreData = [
     price: 100,
     numReviews: 5,
     countInstok: 4,
+    home_page_position: 'trending',
   },
   {
     image:
@@ -61,9 +66,10 @@ const StoreData = [
     categori: 'test3',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora omnis molestias dolores veritatis cum architecto consequuntur pariatur. Voluptate itaque sit error suscipit doloribus numquam esse facere recusandae mollitia temporibus.',
-    price: 100,
+    price: 60,
     numReviews: 3,
     countInstok: 4,
+    home_page_position: 'trending',
   },
   {
     image:
@@ -75,6 +81,7 @@ const StoreData = [
     price: 100,
     numReviews: 3,
     countInstok: 7,
+    home_page_position: 'trending',
   },
   {
     image:
@@ -86,6 +93,7 @@ const StoreData = [
     price: 100,
     numReviews: 3,
     countInstok: 4,
+    home_page_position: 'trending',
   },
   {
     image:

@@ -58,7 +58,7 @@ const Cart = () => {
           </div>
 
           {cartItems.map((item) => (
-            <div className="cart_item">
+            <div className="cart_item" key={item.product}>
               <div className="remuve_button" onClick={()=>removeFromCartHandler(item.product)}>
                 <MdRemoveCircle size={25} style={{ color: '#ff0000' }} />
               </div>
@@ -66,7 +66,7 @@ const Cart = () => {
                 <img src={item.image} alt="" />
               </div>
               <div className="item_title">
-                <Link to={`/products/${item.product}`}>
+                <Link to={`/products/${item.product}`} >
                   <h4>{item.name}</h4>
                 </Link>
               </div>
