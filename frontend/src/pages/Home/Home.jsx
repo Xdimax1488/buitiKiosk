@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 
-import { Categories, Contact, HomeProducts, Slider } from '../components';
+import { Categories, Contact, HomeProducts, Slider } from '../../components';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { listProduct } from '../Redux/Actions/ProductAction';
+import { listProduct } from '../../Redux/Actions/ProductAction';
+
 
 function Home() {
   // const arrived_data = [
@@ -12,7 +13,11 @@ function Home() {
   //   { img: IMG_test, title: 'shoose', price: '100' },
   //   { img: IMG_test, title: 'shoose', price: '100' },
   // ];
+
+ 
   const dispatch = useDispatch();
+
+
 
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
@@ -38,6 +43,7 @@ function Home() {
       />
 
       <Categories />
+      
       <HomeProducts
         loading={loading}
         error={error}

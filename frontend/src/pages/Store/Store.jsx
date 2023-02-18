@@ -32,7 +32,7 @@ const Store = () => {
 
   const skeletons = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
   const onChangeCategories = (i) => setCategoriId(i);
-  console.log(error)
+  
   return (
     <div className="store">
       <div className="store_wrrap">

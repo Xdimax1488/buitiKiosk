@@ -25,4 +25,6 @@ productRoute.get(
   }),
 );
 
+
+
 export default productRoute;

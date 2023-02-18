@@ -27,7 +27,7 @@ const Login = () => {
     e.preventDefault();
     dispatch(login(email, password));
   };
-
+  console.log(userLogin)
   return (
     <div className="login_page">
       {error && <p>{error}</p>}
