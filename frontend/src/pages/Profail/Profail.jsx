@@ -1,12 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import moment from 'moment';
 
 import icon from '../../asets/icon.jpg';
 import { Orders, ProfaileTabs } from '../../components';
+import { getUserDetails } from '../../Redux/Actions/UserActions';
 import './Profail.scss';
 
 const Profail = () => {
   const [showTabs, setShowTabs] = useState(true);
   const [showOrders, setShowOrders] = useState(false);
+
+  const dispatch = useDispatch()
+  const userLogin = useSelector((state)=>state.userLogin)
+  const {userInfo} = userLogin
+
+  useEffect(()=>{
+    dispatch(getUserDetails('profile'))
+  },[dispatch])
 
   return (
     <div className="profail">
@@ -15,8 +26,8 @@ const Profail = () => {
           <div className="profail_info-person">
             <img src={icon} alt="" />
             <div className="person-desc">
-              <h4>admin doe</h4>
-              <h4 className="data">joined dec 12 2022</h4>
+              <h4>{userInfo.name}</h4>
+              <h4 className="data">joined {moment(userInfo.createdAt).format('LL')}</h4>
             </div>
           </div>
           <div className="profail_button">

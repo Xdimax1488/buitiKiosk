@@ -15,7 +15,7 @@ const HomeProducts = ({ title, description, content, loading, error }) => {
       <div className="hp-content">
         {loading ? (
           skeletons
-        ) : error ? (
+        ) : loading ? (
           <p>Error:</p>
         ) : (
           <>

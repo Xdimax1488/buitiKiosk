@@ -38,23 +38,25 @@ const Register = () => {
             placeholder="Username"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
           <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
           <input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
           <button type="submit">Register</button>
           <p>
             <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
-              
               <span>
                 I have account <strong>Login</strong>
               </span>

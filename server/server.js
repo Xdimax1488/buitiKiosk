@@ -34,7 +34,7 @@ app.use(errorHandler)
 // });
 
 app.get('/', (req, res) => {
-  res.send('api is hnh runni');
+  res.send('api is hnh running');
 });
 
 const PORT = process.env.PORT;

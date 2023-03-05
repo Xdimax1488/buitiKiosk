@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Footer, Navbar } from './components';
 import Home from './pages/Home/Home';
