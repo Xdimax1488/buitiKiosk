@@ -8,7 +8,7 @@ const Shipping = () => {
   return (
     <div className="login_page">
       <div className="login_page-container" onSubmit={submitHandler}>
-        <h4>delivery adress</h4>
+        <h4>delivery address</h4>
         <form className="login_page-form">
           <input type="text" placeholder="Enter address" />
           <input type="text" placeholder="Enter city" />
