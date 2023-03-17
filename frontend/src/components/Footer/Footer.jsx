@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="icon">
             <BsFillTelephoneFill
               size={25}
-              style={{ color: '#2879fe', border: '2px solip #2879fe' }}
+              style={{ color: '#2879fe', border: '2px solid #2879fe' }}
             />
           </div>
           <div className="title">Call us 24x7</div>
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="icon">
             <GiPositionMarker size={25} style={{ color: '#2879fe' }} />
           </div>
-          <div className="title">Shoop</div>
+          <div className="title">Shop</div>
           <div className="info">ul.Boston </div>
         </div>
       </div>

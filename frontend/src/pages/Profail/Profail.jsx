@@ -34,7 +34,7 @@ const Profail = () => {
             <button
               className={showTabs === true ? 'active ' : ''}
               onClick={() => setShowTabs(true)(setShowOrders(false))}>
-              Profail settings
+              Profile settings
             </button>
             <button
               className={showOrders === true ? 'active btn-order' : 'btn-order'}

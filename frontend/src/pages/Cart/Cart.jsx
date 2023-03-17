@@ -35,7 +35,7 @@ const Cart = () => {
     navigate('/login?redirect=shipping')
     }
 
-  console.log();
+  //console.log(location);
   return (
     <div className="cart_page">
       {cartItems.length === 0 ? (

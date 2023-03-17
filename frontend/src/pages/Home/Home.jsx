@@ -44,6 +44,7 @@ function Home() {
 
       <Categories />
       
+      
       <HomeProducts
         loading={loading}
         error={error}

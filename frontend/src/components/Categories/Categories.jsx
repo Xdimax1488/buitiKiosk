@@ -1,11 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import './Categories.scss'
 
 const Categories = () => {
+ 
+  const navigate = useNavigate()
 
-  const category =['Women','Sale','New Season','Men','Accessories','Shoes']
+  // const CategoryPageHandle=(e) =>{
+  //   e.preventDefault();
+  //   navigate(`/${}`)
+  // }
+
+  const category =['Women','Sale','New-Season','Men','Accessories','Shoes']
   return (
     <div className='categories'>
       <div className="col">
@@ -15,7 +22,7 @@ const Categories = () => {
             alt=""
           />
           <button>
-            <Link className="link" to="/products/1">
+            <Link className="link" to={`/${category[1]}`}>
               {category[1]}
             </Link>
           </button>
@@ -26,7 +33,7 @@ const Categories = () => {
             alt=""
           />
           <button>
-            <Link to="/products/1" className="link">
+            <Link to={`/${category[0]}`} className="link">
             {category[0]}
             </Link>
           </button>
@@ -40,7 +47,7 @@ const Categories = () => {
             alt=""
           />
           <button>
-            <Link to="/products/1" className="link">
+            <Link to={`/${category[2]}`} className="link">
             {category[2]}
             </Link>
           </button>
@@ -55,7 +62,7 @@ const Categories = () => {
                 alt=""
               />
               <button>
-                <Link to="/products/1" className="link">
+                <Link to={`/${category[3]}`} className="link">
                 {category[3]}
                 </Link>
               </button>
@@ -69,7 +76,7 @@ const Categories = () => {
                 alt=""
               />
               <button>
-                <Link to="/products/1" className="link">
+                <Link to={`/${category[4]}`} className="link">
                 {category[4]}
                 </Link>
               </button>
@@ -82,7 +89,7 @@ const Categories = () => {
             alt=""
           />
           <button>
-            <Link to="/products/1" className="link">
+            <Link to={`/${category[5]}`} className="link">
             {category[5]}
             </Link>
           </button>

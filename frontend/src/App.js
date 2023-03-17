@@ -4,18 +4,17 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { Footer, Navbar } from './components';
 import Home from './pages/Home/Home';
-import Store from './pages/Store/Store';
 
-
+import Cart from './pages/Cart/Cart';
+import Category from './pages/Category/Category';
+import Login from './pages/Forms/Login';
+import Payment from './pages/Forms/Payment';
+import Register from './pages/Forms/Register';
+import Shipping from './pages/Forms/Shipping';
+import OrderScreen from './pages/PlaceOrder/OrderScreen';
+import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import Product from './pages/Product/Product';
 import Profail from './pages/Profail/Profail';
-import Login from './pages/Forms/Login';
-import Register from './pages/Forms/Register';
-import Cart from './pages/Cart/Cart';
-import Shipping from './pages/Forms/Shipping';
-import Payment from './pages/Forms/Payment';
-import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
-import OrderScreen from './pages/PlaceOrder/OrderScreen';
 
 function App() {
   return (
@@ -23,15 +22,16 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/register" element={<Register/>}/>
+        <Route path="/:name_category" element={<Category />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profail />} />
         <Route path="/cart/:id?" element={<Cart />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/placeorder" element={<PlaceOrder />} />
         <Route path="/order" element={<OrderScreen />} />
-        <Route path="/store" element={<Store />} />
+
         <Route path="/products/:id" element={<Product />} />
       </Routes>
       <Footer />
