@@ -9,7 +9,7 @@ import './Store.scss';
 import Skeleton from './StoreSkeleton';
 
 const Store = () => {
-  const categories = ['All', 'Women', 'Sale', 'New-Season', 'Men', 'Accessories', 'Shoes'];
+  
   const location = useLocation();
   const category = location.pathname.split('/')[1];
   const dispatch = useDispatch();
