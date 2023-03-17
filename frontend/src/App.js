@@ -6,7 +6,7 @@ import { Footer, Navbar } from './components';
 import Home from './pages/Home/Home';
 
 import Cart from './pages/Cart/Cart';
-import Category from './pages/Category/Category';
+
 import Login from './pages/Forms/Login';
 import Payment from './pages/Forms/Payment';
 import Register from './pages/Forms/Register';
@@ -15,6 +15,7 @@ import OrderScreen from './pages/PlaceOrder/OrderScreen';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import Product from './pages/Product/Product';
 import Profail from './pages/Profail/Profail';
+import Store from './pages/Store/Store';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/:name_category" element={<Category />} />
+        <Route path="/:name_category" element={<Store/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profail />} />

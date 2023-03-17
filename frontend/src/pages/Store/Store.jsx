@@ -6,9 +6,9 @@ import CategorySection from '../../components/CategorySektion/CategorySection';
 import { listProduct } from '../../Redux/Actions/ProductAction';
 
 import './Store.scss';
-import Skeleton from './Skeleton';
+import Skeleton from './StoreSkeleton';
 
-const Category = () => {
+const Store = () => {
   const categories = ['All', 'Women', 'Sale', 'New-Season', 'Men', 'Accessories', 'Shoes'];
   const location = useLocation();
   const category = location.pathname.split('/')[1];
@@ -48,4 +48,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default Store;
