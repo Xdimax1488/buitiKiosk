@@ -31,7 +31,7 @@ const PlaceOrder = () => {
             <div className="colum_desc">
               <h4>Order Info</h4>
               <p>Shipping: Uk</p>
-              <p>Pay mrthod: Paypal</p>
+              <p>Pay method: Paypal</p>
               <p className="pay_info"> Paid on Jan 02 2022</p>
             </div>
           </div>
@@ -57,7 +57,7 @@ const PlaceOrder = () => {
                 super item
               </Link>
               <div className="quantiti">
-                <h4>quantiti</h4>
+                <h4>quantity</h4>
                 <h4>4</h4>
               </div>
               <div className="total">
@@ -74,7 +74,7 @@ const PlaceOrder = () => {
                 super item
               </Link>
               <div className="quantiti">
-                <h4>quantiti</h4>
+                <h4>quantity</h4>
                 <h4>4</h4>
               </div>
               <div className="total">
@@ -95,7 +95,7 @@ const PlaceOrder = () => {
                 </tr>
                 <tr>
                   <td>
-                    <strong>Shiping</strong>
+                    <strong>Shipping</strong>
                   </td>
                   <td>$86</td>
                 </tr>

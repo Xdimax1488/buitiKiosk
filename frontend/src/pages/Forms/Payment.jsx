@@ -20,7 +20,7 @@ const Payment = () => {
   return (
     <div className="login_page">
       <div className="login_page-container">
-        <h4>delivery adress</h4>
+        <h4>delivery address</h4>
         <form className="login_page-form " onSubmit={submitHandler}>
           <div className="radio_input">
             <input
